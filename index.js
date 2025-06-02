@@ -15,7 +15,7 @@ app.use('/games', gameRoutes);
 const CONNECTION_URL = 'mongodb+srv://ankitkoreak1:SPoUJlg0d1yEFzGG@cluster0.pi1stmb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(CONNECTION_URL)
 .then(() => app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`)))
 .catch((error) => console.log(error.message));
 
